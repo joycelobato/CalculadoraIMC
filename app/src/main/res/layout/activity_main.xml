@@ -30,6 +30,7 @@
             android:id="@+id/edt_peso"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
             android:hint="DIGITE SEU PESO ex: 70.9" />
     </com.google.android.material.textfield.TextInputLayout>
 
