@@ -27,7 +27,7 @@ class ResultActivity : AppCompatActivity() {
         
         if(result <= 18.5f){
             classificacao = "MAGREZA"
-        } else if (result > 18.5f && result <= 24.9f){
+        } else if (result > 18.5f && result <= 24.99f){
             classificacao = "NORMAL"
         } else if (result > 25f && result <= 29.9f){
             classificacao = "SOBREPESO"
