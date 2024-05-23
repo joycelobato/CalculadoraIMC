@@ -13,8 +13,7 @@ class MainActivity : AppCompatActivity() {
     @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
-        enableEdgeToEdge()
+        
         setContentView(R.layout.activity_main)
 
         val edtPeso = findViewById<TextInputEditText>(R.id.edt_peso)
