@@ -9,9 +9,9 @@ O app Calculadora IMC serve para calcular o índice de massa corporal através d
 <!-- You can add more screenshots here if you like -->
 Screenshots
 
-<img src="https://github.com/joycelobato/CalculadoraIMC/assets/166595381/d6c8b772-1e00-4c2b-bdf9-5a39fac0d7e1" width=260/>
- <img src="https://github.com/joycelobato/CalculadoraIMC/assets/166595381/3689e3f4-016b-4f70-9d06-bdac7e1a249d" width=260/>
 
+<img src= "https://github.com/joycelobato/CalculadoraIMC/assets/166595381/b60d2f37-eb9e-4def-9cef-c25a2da6b931" width=260/>
+<img src= "https://github.com/joycelobato/CalculadoraIMC/assets/166595381/b8e08f5c-fd58-4033-af6e-679c922055b2" width=260/>
 
 ## Tecnologias
 - Activity
