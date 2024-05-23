@@ -1,0 +1,31 @@
+Index: app/src/main/java/com/comunidadedevspace/imc/MainActivity.kt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.comunidadedevspace.imc\r\n\r\nimport android.annotation.SuppressLint\r\nimport android.content.Intent\r\nimport androidx.appcompat.app.AppCompatActivity\r\nimport android.os.Bundle\r\nimport android.widget.Button\r\nimport com.google.android.material.snackbar.Snackbar\r\nimport com.google.android.material.textfield.TextInputEditText\r\n\r\nclass MainActivity : AppCompatActivity() {\r\n    @SuppressLint(\"MissingInflatedId\")\r\n    override fun onCreate(savedInstanceState: Bundle?) {\r\n        super.onCreate(savedInstanceState)\r\n        setContentView(R.layout.activity_main)\r\n\r\n        val edtPeso = findViewById<TextInputEditText>(R.id.edt_peso)\r\n        val edtAltura = findViewById<TextInputEditText>(R.id.edt_altura)\r\n\r\n        val btnCalcular = findViewById<Button>(R.id.btn_calcular)\r\n\r\n        btnCalcular.setOnClickListener {\r\n\r\n\r\n            val pesoStr: String = edtPeso.text.toString()\r\n            val alturaStr: String = edtAltura.text.toString()\r\n\r\n            if (pesoStr == \"\" || alturaStr == \"\") {\r\n                Snackbar.make(\r\n                    edtPeso,\r\n                    \"Preencha todos os campos\",\r\n                    Snackbar.LENGTH_LONG\r\n\r\n                ).show()\r\n\r\n\r\n            } else {\r\n            val peso = pesoStr.toFloat()\r\n            val altura = alturaStr.toFloat()\r\n\r\n            val alturaQ2 = altura * altura\r\n            val resultado = peso / alturaQ2\r\n\r\n                val intent = Intent (this, ResultActivity::class.java)\r\n                intent.putExtra(KEY_RESULT_IMC, resultado)\r\n                startActivity(intent)\r\n\r\n           \r\n\r\n    }\r\n}}}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/com/comunidadedevspace/imc/MainActivity.kt b/app/src/main/java/com/comunidadedevspace/imc/MainActivity.kt
+--- a/app/src/main/java/com/comunidadedevspace/imc/MainActivity.kt	(revision 93cadeafb3faa57fec91be5388b03ba902aef578)
++++ b/app/src/main/java/com/comunidadedevspace/imc/MainActivity.kt	(date 1716479279537)
+@@ -5,6 +5,9 @@
+ import androidx.appcompat.app.AppCompatActivity
+ import android.os.Bundle
+ import android.widget.Button
++import androidx.activity.enableEdgeToEdge
++import androidx.core.view.ViewCompat
++import androidx.core.view.WindowInsetsCompat
+ import com.google.android.material.snackbar.Snackbar
+ import com.google.android.material.textfield.TextInputEditText
+ 
+@@ -12,8 +15,10 @@
+     @SuppressLint("MissingInflatedId")
+     override fun onCreate(savedInstanceState: Bundle?) {
+         super.onCreate(savedInstanceState)
++            
+         setContentView(R.layout.activity_main)
+ 
++
+         val edtPeso = findViewById<TextInputEditText>(R.id.edt_peso)
+         val edtAltura = findViewById<TextInputEditText>(R.id.edt_altura)
+ 
