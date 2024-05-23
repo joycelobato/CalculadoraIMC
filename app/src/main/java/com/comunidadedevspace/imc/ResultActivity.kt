@@ -12,7 +12,7 @@ const val KEY_RESULT_IMC = "ResultActivity.KEY_IMC"
 class ResultActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
+
         setContentView(R.layout.activity_result)
 
         val result = intent.getFloatExtra(KEY_RESULT_IMC, 0f)
@@ -23,17 +23,17 @@ class ResultActivity : AppCompatActivity() {
         tvResult.text = result.toString()
 
         var classificacao: String? = null
-        
-        if(result <= 18.5f){
-            classificacao = "MAGREZA"
+
+        classificacao = if(result <= 18.5f){
+            "MAGREZA"
         } else if (result > 18.5f && result <= 24.99f){
-            classificacao = "NORMAL"
+            "NORMAL"
         } else if (result > 25f && result <= 29.9f){
-            classificacao = "SOBREPESO"
+            "SOBREPESO"
         } else if (result > 30f && result <=39.9f){
-            classificacao = "OBESIDADE"
+            "OBESIDADE"
         } else {
-            classificacao = "OBESIDADE GRAVE"
+            "OBESIDADE GRAVE"
         }
         tvClassificacao.text=classificacao
     }
